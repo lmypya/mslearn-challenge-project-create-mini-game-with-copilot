@@ -77,6 +77,9 @@ def main():
         rounds_played += 1
 
         play_again = input("Do you want to play again? (yes/no): ").lower()
+        #if user enters anything other than 'yes' or 'no', the game will ask the user to enter again
+        while play_again not in ["yes", "no"]:
+            play_again = input("Invalid input. Please enter 'yes' or 'no': ").lower()
         if play_again != "yes":
             break
 
